@@ -2,7 +2,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* opcional pero casi obligatorio hoy */
+    box-sizing: border-box; 
 }
 
 
@@ -16,7 +16,7 @@
     list-style: none;
     display: flex;                      
     flex-direction: row-reverse;
-    align-items: center; /* 👈 ESTA ES LA CLAVE */
+    align-items: center; 
     padding: 10px 210px;
     height: 100%;
     justify-content: space-between;
@@ -59,9 +59,9 @@ span{
     font-size: 55px;
     text-align: center;
     padding: 55px 0px 0px 0px;
-    display: flex;          /* el header ahora es flex‑container        */
-    justify-content: center;/* centra horizontalmente a todo su hijo    */
-    align-items: center;    /* centra verticalmente a todo su hijo      */
+    display: flex;          
+    justify-content: center;
+    align-items: center;    
 }
 
 .home2 p{
@@ -81,8 +81,8 @@ span{
     align-items: center;
     justify-content: center;
     position: absolute;
-    bottom: 0;             /* alinea en el límite inferior */
-    left: 50%;              /* centra horizontalmente (punto medio del main) */
+    bottom: 0;             
+    left: 50%;              
     transform: translateX(-50%); 
 }
 
@@ -95,7 +95,7 @@ span{
     flex-direction: column;
     padding-left: 210px;
     position: absolute;
-    bottom: 0;             /* alinea en el límite inferior */              /* centra horizontalmente (punto medio del main) */
+    bottom: 0;             
 }
 
 i {
@@ -124,8 +124,8 @@ i {
     text-align:justify;
     margin: 20px;
     padding:30px ;
-    justify-content: center;/* centra horizontalmente a todo su hijo    */
-    align-items: center;    /* centra verticalmente a todo su hijo      */
+    justify-content: center;
+    align-items: center;    
 }
 
 
@@ -148,9 +148,9 @@ i {
     font-style: normal;
     font-size: 55px;
     text-align: center;
-    display: flex;          /* el header ahora es flex‑container        */
-    justify-content: center;/* centra horizontalmente a todo su hijo    */
-    align-items: center;    /* centra verticalmente a todo su hijo      */
+    display: flex;          
+    justify-content: center;
+    align-items: center;    
     padding-right: 100px;
 }
 .venta1 p{
