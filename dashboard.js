@@ -76,12 +76,11 @@ let historialSemanas = {
   1: ["", "", ""].map(() => []),
 };
 
-// Función para crear un <li> con texto, botón eliminar y botón completar
+
 function crearElementoLista(texto) {
   let nuevoElemento = document.createElement("li");
   nuevoElemento.textContent = texto;
 
-  // Estilos directos
   Object.assign(nuevoElemento.style, {
     color: "black",
     padding: "8px",
@@ -96,12 +95,12 @@ function crearElementoLista(texto) {
   botonBorrar.textContent = "Eliminar";
   Object.assign(botonBorrar.style, {
     backgroundColor: "#ff4444",
-    color: "#fff",
+    color: "black",
     border: "none",
     padding: "5px 10px",
     borderRadius: "4px",
     cursor: "pointer",
-    fontSize: "7px",
+    fontSize: "10px",
   });
   botonBorrar.addEventListener("click", () => {
     nuevoElemento.remove();
@@ -110,13 +109,13 @@ function crearElementoLista(texto) {
   let botonCompletar = document.createElement("button");
   botonCompletar.textContent = "Hecho";
   Object.assign(botonCompletar.style, {
-    backgroundColor: "#3ffc00ff",
-    color: "#fff",
+    backgroundColor: "#afe59cff",
+    color: "black",
     border: "none",
     padding: "5px 10px",
     borderRadius: "4px",
     cursor: "pointer",
-    fontSize: "12px",
+    fontSize: "10px",
   });
   botonCompletar.addEventListener("click", () => {
     nuevoElemento.classList.toggle("completada");
@@ -133,7 +132,12 @@ botones.forEach((boton, index) => {
   boton.addEventListener("click", () => {
     let texto = inputs[index].value.trim();
     if (texto === "") {
-      alert("Escribe una tarea antes de agregar.");
+       Swal.fire({
+    icon: "warning",
+    title: "Campo vacío",
+    text: "Escribe una tarea antes de agregar.",
+    confirmButtonColor: "#3085d6"
+  });
       return;
     }
 
@@ -171,4 +175,11 @@ document.getElementById("anteriorSemana").addEventListener("click", () => {
     semanaActual--;
     actualizarUI();
   }
+});
+
+const logoutBtn = document.getElementById("btn-logout");
+
+logoutBtn.addEventListener("click", () => {
+  localStorage.removeItem("usuario"); // Borra el usuario activo
+  window.location.href = "login.html"; // Redirige al login
 });

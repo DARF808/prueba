@@ -19,11 +19,17 @@ const email = document.getElementById("login-email").value;
 const pass = document.getElementById("login-pass").value;
 
   // Simulación simple de validación
-    if (email === "frdiego1601@gmail.com" && pass === "1234") {
+    if (email === "usuarionuevo@gmail.com" && pass === "usuarionuevo") {
         localStorage.setItem("usuario", email);
         console.log("Guardando en localStorage: ", email);
         window.location.href = "dashboard.html"; // redirige a la siguiente página
     } else {
-    alert("Correo o contraseña incorrectos");
+   Swal.fire({
+            icon: "error",
+            title: "Correo o contraseña incorrectos",
+            text: "Por favor verifica tus datos e intenta de nuevo",
+            confirmButtonColor: "#3085d6"
+        });
     }
 });
+
